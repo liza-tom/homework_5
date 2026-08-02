@@ -11,11 +11,15 @@ public class Main {
         }
 
         //task 2
-        int yearOfRelease = 2013;
-        if (clientOS == 0 && yearOfRelease <= 2015) {
+        int clientDeviceYear = 2017;
+        if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientOS == 1 && yearOfRelease <= 2015) {
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Неверно указанная ОС");
         }
@@ -32,15 +36,15 @@ public class Main {
         //task 4
         int deliveryDistance = 70;
         int deliveryTime;
-        if (deliveryDistance < 20){
+        if (deliveryDistance <= 20){
             deliveryTime = 1;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
-        else if(20 <= deliveryDistance && deliveryDistance < 60){
+        else if(20 < deliveryDistance && deliveryDistance <= 60){
             deliveryTime = 2;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
-        else if(60 <= deliveryDistance && deliveryDistance < 100){
+        else if(60 < deliveryDistance && deliveryDistance <= 100){
             deliveryTime = 3;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
